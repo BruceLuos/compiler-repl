@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export default function Timer() {
   const [time, setTime] = useState(0);
 
+  // 函数一直不断重新生成，但react-compiler似乎会处理这个问题
   function adjustTime() {
     setTime((time) => time + 1);
   }
